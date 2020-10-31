@@ -1,0 +1,4 @@
+# SwachhData
+
+## Authors-
+* Kritik Seth
