@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="swachhdata", # Replace with your own username
-    version="0.0.6",
+    version="0.1.5",
     author="Kritik Seth",
     author_email="sethkritik@gmail.com",
     description="Package that cleans your data",
@@ -22,7 +22,7 @@ setuptools.setup(
     install_requires=['asn1crypto', 'backports.functools-lru-cache', 'click', 'docopt', 'enum34', 'inexactsearch',
           'beautifulsoup4', 'contractions', 'regex', 'emoji', 'html2text', 'html5lib', 'MarkupSafe',
           'httplib2', 'lxml', 'nltk', 'num2words', 'pycrypto', 'textblob', 'Unidecode', 'pyahocorasick', 'pytz', 
-          'unicode', 'textsearch', 'soupsieve', 'webencodings'
+          'unicode', 'textsearch', 'soupsieve', 'webencodings', 'pandas'
       ],
     python_requires='>=3.6'
 )

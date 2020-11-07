@@ -13,6 +13,7 @@ import emoji
 from emoji import UNICODE_EMOJI
 import unicodedata
 import num2words
+import pandas
 import string
 from nltk.tokenize import WhitespaceTokenizer
 from nltk.corpus import stopwords
@@ -31,7 +32,10 @@ class TextSetup:
         self.text = self.t
         self.dtype_str = isinstance(self.text, str)
         self.dtype_list = isinstance(self.text, list)
-
+        self.dtype_pd_series = isinstance(self.text, pandas.core.series.Series)
+        if self.dtype_pd_series:
+            self.t = text.tolist()
+            self.text = self.t
 
 class SwachhText(TextSetup):
     def __init__(self, TextSetup):
@@ -39,6 +43,8 @@ class SwachhText(TextSetup):
         self.text = self.t
         self.dtype_str = isinstance(self.text, str)
         self.dtype_list = isinstance(self.text, list)
+        self.dtype_pd_series = isinstance(self.text, pandas.core.series.Series)
+
     
     def remove_url(self):
         
@@ -401,6 +407,8 @@ class SwachhSabText(SwachhText):
         self.text = self.t
         self.dtype_str = isinstance(self.text, str)
         self.dtype_list = isinstance(self.text, list)
+        self.dtype_pd_series = isinstance(self.text, pandas.core.series.Series)
+
     
     def clean_text(self, verbose=False, **kwargs):
         
@@ -430,7 +438,7 @@ class SwachhSabText(SwachhText):
 
         if 'exp_contraction' in kwargs and kwargs['exp_contraction']:
             if verbose:
-                print('Expanding conractions...')
+                print('Expanding contractions...')
             self.text = SwachhText.map_contraction(self)
         
         if 'lower_case' in kwargs and kwargs['lower_case']:
