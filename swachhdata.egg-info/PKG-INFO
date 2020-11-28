@@ -1,19 +1,18 @@
-Metadata-Version: 2.1
+Metadata-Version: 1.1
 Name: swachhdata
-Version: 0.1.5
-Summary: Package that cleans your data
-Home-page: https://github.com/kritikseth
+Version: 0.1.8b1
+Summary: Data cleaning made easy with swachhdata
+Home-page: https://github.com/kritikseth/swachhdata
 Author: Kritik Seth
 Author-email: sethkritik@gmail.com
 License: UNKNOWN
-Description: # SwachhData
-        
-        ## Authors-
-        * Kritik Seth
-        
+Description: UNKNOWN
 Platform: UNKNOWN
+Classifier: Natural Language :: English
 Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
 Classifier: Operating System :: OS Independent
-Requires-Python: >=3.6
-Description-Content-Type: text/markdown
+Classifier: Development Status :: 4 - Beta
