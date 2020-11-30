@@ -906,7 +906,6 @@ class CaseRecast(TextFormatter):
     >>> # OR
     >>> rec.setup_recast(text)
     'You Can Have A Look At Our Catalogue In The Services Tab'
-    >>>
     """
 
     def __init__(self, process='lower', verbose=0):
@@ -1351,7 +1350,6 @@ class HashtagRecast(TextFormatter):
     >>> rec.setup_recast(text)
     'Post a photo with tag to win prizes'
     ['#samplephoto']
-    >>>
     """
 
     def __init__(self, process='remove', verbose=0):
