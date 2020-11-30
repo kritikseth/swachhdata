@@ -2,7 +2,7 @@ from setuptools import setup, find_namespace_packages
 
 setup(
     name='swachhdata',
-    version='0.1.8b1',
+    version='1.0.0',
     author='Kritik Seth',
     author_email='sethkritik@gmail.com',
     description='Data cleaning made easy with swachhdata',

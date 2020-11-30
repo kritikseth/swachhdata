@@ -5,9 +5,9 @@ Recast text data by removing stop words.
     
     Parameters
     ----------
-    package: str ('nltk', 'spacy', 'gemsim', 'custom'), default='nltk'
-    stopwords: list (package='custom'), list of stopwords 
-    verbose: int (0, 1, -1), default=0
+     package : str ('nltk', 'spacy', 'gensim', 'custom'), default='nltk'
+     stopwords : list (package='custom'), list of stopwords 
+     verbose : int (0, 1, -1), default=0
 
 
     Examples
