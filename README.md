@@ -6,7 +6,7 @@
 * Accessible to everybody, and reusable in various contexts
 * Open source, commercially usable - MPL-2.0 license
 
-## Documentation-
+## Documentation- [![Documentation Status](https://readthedocs.org/projects/swachhdata/badge/?version=latest)](https://swachhdata.readthedocs.io/en/latest/?badge=latest)
 
 * https://swachhdata.readthedocs.io/en/latest/
 
