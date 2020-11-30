@@ -1,12 +1,12 @@
-ReCast
-======
+TextRecast
+==========
 
-ReCast is a wrapper function for Recast classes.
+TextRecast is a wrapper function for Recast classes.
     
       Parameters
       ----------
       text : string / list of strings / pandas.core.series.Series
-      **kwargs
+      `**kwargs`
 
       Attributes
       ----------

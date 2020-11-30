@@ -22,10 +22,10 @@ Recast text data by removing or extracting URLs.
 
     Attributes
     ----------
-    get_regex_ : string
+     get_regex_ : string
         regex being used by recast
 
-    url_ : list of string(s)
+     url_ : list of string(s)
         extracted url(s)
     
 

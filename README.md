@@ -8,4 +8,4 @@
 * 
 
 ## Author-
-* Kritik Seth
+* [Kritik Seth](https://kritikseth.github.io)

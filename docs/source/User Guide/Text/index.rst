@@ -21,4 +21,4 @@ Text
    TokenisationRecast
    StemmingRecast
    LemmatizationRecast
-   ReCast
+   TextRecast
