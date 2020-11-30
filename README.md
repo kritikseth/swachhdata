@@ -6,14 +6,9 @@
 * Accessible to everybody, and reusable in various contexts
 * Open source, commercially usable - MPL-2.0 license
 
-<<<<<<< HEAD
 ## Documentation-
 
 * https://swachhdata.readthedocs.io/en/latest/
-=======
-## Documentation-
-* 
->>>>>>> parent of 10cac7f... 1.0.1- docs, long desc
 
 ## Author-
 
