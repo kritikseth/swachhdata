@@ -3,3 +3,4 @@ numpydoc
 numpy
 jupyter_sphinx
 pydata_sphinx_theme
+cython
