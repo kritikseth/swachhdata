@@ -1,11 +1,16 @@
 from setuptools import setup, find_namespace_packages
 
+with open('README.md', 'r') as fh:
+    long_description = fh.read()
+
 setup(
     name='swachhdata',
-    version='1.0.0',
+    version='1.0.5',
     author='Kritik Seth',
     author_email='sethkritik@gmail.com',
     description='Data cleaning made easy with swachhdata',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url='https://github.com/kritikseth/swachhdata',
     classifiers=[
         'Natural Language :: English',
