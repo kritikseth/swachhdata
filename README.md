@@ -7,7 +7,7 @@
 * Open source, commercially usable - MPL-2.0 license
 
 <<<<<<< HEAD
-## Documentation- [![Documentation Status](https://readthedocs.org/projects/swachhdata/badge/?version=latest)](https://swachhdata.readthedocs.io/en/latest/?badge=latest)
+## Documentation-
 
 * https://swachhdata.readthedocs.io/en/latest/
 =======
