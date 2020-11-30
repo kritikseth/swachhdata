@@ -1,12 +1,27 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: swachhdata
-Version: 1.0.0
+Version: 1.0.3
 Summary: Data cleaning made easy with swachhdata
 Home-page: https://swachhdata.readthedocs.io/
 Author: Kritik Seth
 Author-email: sethkritik@gmail.com
 License: UNKNOWN
-Description: UNKNOWN
+Description: ![](https://raw.githubusercontent.com/kritikseth/kritikseth/master/assets/icons/swachhdata.svg)
+        
+        # swachhdata
+        
+        * Simple and efficient tools for cleaning and transforming data
+        * Accessible to everybody, and reusable in various contexts
+        * Open source, commercially usable - MPL-2.0 license
+        
+        ## Documentation- 
+        
+        * https://swachhdata.readthedocs.io/en/latest/
+        * [Examples](https://colab.research.google.com/drive/1IH7ve5xoQ4vLyrRP4HvTCYBlj1Ub1GGS?usp=sharing#scrollTo=3Seymy37xQk4)
+        
+        ## Author-
+        
+        <a href="https://kritikseth.github.io/ipynbtagredirect" target="_parent"><img src="https://raw.githack.com/kritikseth/kritikseth/master/assets/icons/kritik_ipynbtagredirect.svg" alt="Kritik Seth"/></a>
 Platform: UNKNOWN
 Classifier: Natural Language :: English
 Classifier: Programming Language :: Python :: 3
@@ -16,3 +31,4 @@ Classifier: Programming Language :: Python :: 3.8
 Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
 Classifier: Operating System :: OS Independent
 Classifier: Development Status :: 5 - Production/Stable
+Description-Content-Type: text/markdown

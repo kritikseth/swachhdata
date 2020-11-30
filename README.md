@@ -9,6 +9,7 @@
 ## Documentation- 
 
 * https://swachhdata.readthedocs.io/en/latest/
+* [Examples](https://colab.research.google.com/drive/1IH7ve5xoQ4vLyrRP4HvTCYBlj1Ub1GGS?usp=sharing#scrollTo=3Seymy37xQk4)
 
 ## Author-
 
