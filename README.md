@@ -1,3 +1,9 @@
+<<<<<<< Updated upstream
+=======
+![](https://raw.githubusercontent.com/kritikseth/kritikseth/master/assets/icons/swachhdata.svg)
+
+
+>>>>>>> Stashed changes
 # swachhdata
 
 * Simple and efficient tools for cleaning and transforming data
