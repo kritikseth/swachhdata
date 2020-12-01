@@ -2941,8 +2941,8 @@ class LemmatizationRecast(TextFormatter):
 ##############################################################################################################
 
 
-def ReCast(text, **kwargs):
-    """ReCast: wrapper function for Recast classes.
+def TextRecast(text, **kwargs):
+    """TextRecast: wrapper function for Recast classes.
     
     Parameters
     ----------
@@ -2995,7 +2995,7 @@ def ReCast(text, **kwargs):
     if 'urlRecast' in kwargs:
         
         ccount +=  1
-        pbar.set_postfix({'urlRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'urlRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         global url
         if kwargs['urlRecast']['process'] == 'extract_remove':
@@ -3012,7 +3012,7 @@ def ReCast(text, **kwargs):
     if 'htmlRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'htmlRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'htmlRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         text = htmlRecast(verbose=verbose).setup_recast(text)
         pbar.update(tcount)
@@ -3020,7 +3020,7 @@ def ReCast(text, **kwargs):
     if 'EscapeSequenceRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'EscapeSequenceRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'EscapeSequenceRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         text = EscapeSequenceRecast(verbose=verbose).setup_recast(text)
         pbar.update(tcount)
@@ -3028,7 +3028,7 @@ def ReCast(text, **kwargs):
     if 'MentionRecast' in kwargs:
         
         ccount +=  1
-        pbar.set_postfix({'MentionRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'MentionRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         global mention
         if kwargs['MentionRecast']['process'] == 'extract_remove':
@@ -3045,7 +3045,7 @@ def ReCast(text, **kwargs):
     if 'ContractionsRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'ContractionsRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'ContractionsRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         text = ContractionsRecast(verbose=verbose).setup_recast(text)
         pbar.update(tcount)
@@ -3053,7 +3053,7 @@ def ReCast(text, **kwargs):
     if 'CaseRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'CaseRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'CaseRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         text = CaseRecast(kwargs['CaseRecast']['process'], verbose=verbose).setup_recast(text)
         pbar.update(tcount)
@@ -3061,7 +3061,7 @@ def ReCast(text, **kwargs):
     if 'EmojiRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'EmojiRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'EmojiRecast || TextRecast No': f'{ccount}/{rcount}'})
         
         global emoji
         if kwargs['EmojiRecast']['process'] == 'extract_remove':
@@ -3078,7 +3078,7 @@ def ReCast(text, **kwargs):
     if 'HashtagRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'HashtagRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'HashtagRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         global hashtag
         if kwargs['HashtagRecast']['process'] == 'extract_remove':
@@ -3095,7 +3095,7 @@ def ReCast(text, **kwargs):
     if 'ShortWordsRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'ShortWordsRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'ShortWordsRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         text = ShortWordsRecast(kwargs['ShortWordsRecast']['min_length'], verbose=verbose).setup_recast(text)
         pbar.update(tcount)
@@ -3103,15 +3103,15 @@ def ReCast(text, **kwargs):
     if 'StopWordsRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'StopWordsRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'StopWordsRecast || TextRecast No': f'{ccount}/{rcount}'})
 
-        text = StopWordsRecast(kwargs['StopWordsRecast']['package'], kwargs['StopWordsRecast']['space_out'], verbose=verbose).setup_recast(text)
+        text = StopWordsRecast(kwargs['StopWordsRecast']['package'], kwargs['StopWordsRecast']['stopwords'], verbose=verbose).setup_recast(text)
         pbar.update(tcount)
 
     if 'NumberRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'NumberRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'NumberRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         global number
         if kwargs['NumberRecast']['process'] == 'extract_remove' or kwargs['NumberRecast']['process'] == 'extract_replace':
@@ -3128,7 +3128,7 @@ def ReCast(text, **kwargs):
     if 'AlphabetRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'AlphabetRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'AlphabetRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         text = AlphabetRecast(kwargs['AlphabetRecast']['process'], verbose=verbose).setup_recast(text)
         pbar.update(tcount)
@@ -3136,7 +3136,7 @@ def ReCast(text, **kwargs):
     if 'PunctuationRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'PunctuationRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'PunctuationRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         text = PunctuationRecast(verbose=verbose).setup_recast(text)
         pbar.update(tcount)
@@ -3144,7 +3144,7 @@ def ReCast(text, **kwargs):
     if 'StemmingRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'StemmingRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'StemmingRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         text = StemmingRecast(kwargs['StemmingRecast']['package'], kwargs['StemmingRecast']['method'], verbose=verbose).setup_recast(text)
         pbar.update(tcount)
@@ -3152,7 +3152,7 @@ def ReCast(text, **kwargs):
     if 'LemmatizationRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'LemmatizationRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'LemmatizationRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         text = LemmatizationRecast(kwargs['LemmatizationRecast']['package'], verbose=verbose).setup_recast(text)
         pbar.update(tcount)
@@ -3160,12 +3160,13 @@ def ReCast(text, **kwargs):
     if 'TokenisationRecast' in kwargs:
 
         ccount +=  1
-        pbar.set_postfix({'TokenisationRecast || ReCast No': f'{ccount}/{rcount}'})
+        pbar.set_postfix({'TokenisationRecast || TextRecast No': f'{ccount}/{rcount}'})
 
         global token
         token = TokenisationRecast(kwargs['TokenisationRecast']['package'], kwargs['TokenisationRecast']['method'], verbose=verbose).setup_recast(text)
         pbar.update(tcount)
 
+    pbar.set_postfix({'TextRecast Complete! || TextRecast No': f'{ccount}/{rcount}'})
     pbar.close()
     
     return text

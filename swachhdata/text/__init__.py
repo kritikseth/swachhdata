@@ -14,7 +14,7 @@ from ._text import PunctuationRecast
 from ._text import StemmingRecast
 from ._text import LemmatizationRecast
 from ._text import TokenisationRecast
-from ._text import ReCast
+from ._text import TextRecast
 
 
 __all__ = [
@@ -34,5 +34,5 @@ __all__ = [
     'StemmingRecast',
     'LemmatizationRecast',
     'TokenisationRecast',
-    'ReCast'
+    'TextRecast'
 ]
