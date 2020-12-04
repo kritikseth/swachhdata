@@ -3,7 +3,7 @@
 # swachhdata
 
 [![pypi package](https://badge.fury.io/py/swachhdata.svg)](https://pypi.org/project/swachhdata)
-[![downloads](https://img.shields.io/pypi/dm/swachhdata.svg)](https://pypistats.org/packages/swachhdata)
+[![Downloads](https://static.pepy.tech/personalized-badge/swachhdata?period=total&units=international_system&left_color=gray&right_color=blue&left_text=Downloads)](https://pepy.tech/project/swachhdata)
 [![GitHub last commit](https://img.shields.io/github/last-commit/kritikseth/swachhdata.svg)](https://github.com/kritikseth/swachhdata/commits/master)
 [![GitHub](https://img.shields.io/github/license/kritikseth/swachhdata.svg)](https://github.com/kritikseth/swachhdata/blob/master/LICENSE)
 
