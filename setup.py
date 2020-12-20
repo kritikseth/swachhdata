@@ -36,6 +36,8 @@ setup(
         'spacy>=2.2.4',
         'gensim>=3.6.0',
         'num2words>=0.5.10',
-        'textblob>=0.15.3'
+        'textblob>=0.15.3',
+        'requests>=2.23.0',
+        'opencv-python>=4.1.2.30'
     ]
 )
