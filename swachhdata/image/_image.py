@@ -7,6 +7,7 @@ import urllib
 import cv2
 
 from tqdm.auto import tqdm
+import random
 
 
 class ImageNet:
@@ -99,3 +100,56 @@ class ImageNet:
                     None
                 i += 1
         return self.images_, self.labels_
+
+def image_split(images, labels, split_size=0.5, random_state=None):
+    """Split Images and Labels
+    Returns in format (train, test, train_label, test_label)
+    Where train > test
+    
+    Parameters
+    ----------
+    images: numpy.array
+    labels: list
+    split_size: float, default=0.5
+    random_state: int, default=None
+
+    Examples
+    --------
+    >>> from swachhdata.image import image_split
+    >>> train, test, train_label, test_label = image_split(images, labels, split_size=0.3, random_state=123)
+    """
+
+    random.seed(random_state)
+    unq = list(set(labels))
+    unq_c = len(unq)
+    ind1, ind2 = [], []
+
+    for cat in unq:
+        ind = [i for i, x in enumerate(labels) if x == cat]
+        ind_c = len(ind)
+        random.shuffle(ind)
+        if split_size >= 0.5:
+            ind1.append(ind[0:round(ind_c*split_size)])
+            ind2.append(ind[round(ind_c*(split_size)):])
+        else:
+            ind2.append(ind[0:round(ind_c*split_size)])
+            ind1.append(ind[round(ind_c*(split_size)):])
+    
+    ind1 = [item for sublist in ind1 for item in sublist]
+    ind2 = [item for sublist in ind2 for item in sublist]
+
+    label1 = np.take(labels, ind1)
+    label2 = np.take(labels, ind2)
+
+    image1 = np.zeros((len(label1), images.shape[1], images.shape[2], images.shape[3]))
+    image2 = np.zeros((len(label2), images.shape[1], images.shape[2], images.shape[3]))
+
+    i, j = 0, 0
+    for ind in ind1:
+        image1[i] = images[ind]
+        i += 1
+    for ind in ind2:
+        image2[j] = images[ind]
+        j += 1
+
+    return image1, image2, label1, label2

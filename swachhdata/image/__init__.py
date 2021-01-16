@@ -1,5 +1,6 @@
-from ._image import ImageNet
+from ._image import ImageNet, image_split
 
 __all__ = [
-    'ImageNet'
+    'ImageNet',
+    'image_split'
 ]
