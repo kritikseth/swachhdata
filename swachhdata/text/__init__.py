@@ -15,6 +15,7 @@ from ._text import StemmingRecast
 from ._text import LemmatizationRecast
 from ._text import TokenisationRecast
 from ._text import TextRecast
+from ._text import TweetExtractor
 
 
 __all__ = [
@@ -34,5 +35,6 @@ __all__ = [
     'StemmingRecast',
     'LemmatizationRecast',
     'TokenisationRecast',
-    'TextRecast'
+    'TextRecast',
+    'TweetExtractor'
 ]

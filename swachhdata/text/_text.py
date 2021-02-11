@@ -15,6 +15,10 @@ import unicodedata
 import string
 import json
 import textblob
+import tweepy
+from tweepy import OAuthHandler
+from tweepy.streaming import StreamListener
+from tweepy import Stream
 
 from ._base import TextFormatter
 
@@ -3172,5 +3176,34 @@ def TextRecast(text, **kwargs):
     return text
 
 
-
-
+class TweetExtractor:
+    
+    def __init__(self, keys):
+        self.__consumer_key = keys['consumer_key']
+        self.__consumer_secret = keys['consumer_secret']
+        self.__access_token = keys['access_token']
+        self.__access_token_secret = keys['access_token_secret']
+        self.__auth = tweepy.OAuthHandler(self.__consumer_key, self.__consumer_secret)
+        self.__auth.set_access_token(self.__access_token, self.__access_token_secret)
+        self.__api = tweepy.API(self.__auth)
+        self.__df = None
+        self.__verbose = 0
+    
+    def extract(self, keyword, count, verbose=1):
+        i, file_name = 0, 'my_tweets'
+        df = pandas.DataFrame(columns = ['ID', 'User', 'Tweets','fav_count', 'rt_count', 'tweet_date'])
+        for tweet in tweepy.Cursor(self.__api.search, q=keyword, count=100, lang='en', tweet_mode='extended').items():
+            print(i, end='\r')
+            df.loc[i, 'ID'] = tweet.id
+            df.loc[i, 'Tweets'] = tweet.full_text
+            df.loc[i, 'User'] = tweet.user.name
+            df.loc[i, 'fav_count'] = tweet.favorite_count
+            df.loc[i, 'rt_count'] = tweet.retweet_count
+            df.loc[i, 'tweet_date'] = tweet.created_at
+            df.to_excel('{}.xlsx'.format(file_name))
+            i+=1
+            if i == count:
+                break
+            else:
+                pass
+        return df

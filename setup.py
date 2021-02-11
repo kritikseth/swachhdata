@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setup(
     name='swachhdata',
-    version='1.1.4',
+    version='1.1.7',
     author='Kritik Seth',
     author_email='sethkritik@gmail.com',
     description='Data cleaning made easy with swachhdata',
@@ -38,6 +38,7 @@ setup(
         'num2words>=0.5.10',
         'textblob>=0.15.3',
         'requests>=2.23.0',
-        'opencv-python>=4.1.2.30'
+        'opencv-python>=4.1.2.30',
+        'tweepy>=3.6.0'
     ]
 )
