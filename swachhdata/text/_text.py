@@ -3177,6 +3177,9 @@ def TextRecast(text, **kwargs):
     return text
 
 
+##############################################################################################################
+
+
 class TweetExtractor:
     """TweetExtractor: wrapper function for tweepy.Cursor, helps you fetch tweets from twitter
     
@@ -3246,3 +3249,22 @@ class TweetExtractor:
             df.to_csv(f'{file_name}.csv', index=False)
         else:
             return df
+
+
+##############################################################################################################
+
+      
+def RecastPipeline(text, recastFuncs, **kwargs):
+
+    ccount = 0 # complete count
+    rcount = len(recastFuncs) # recast count
+    tcount = len(text) # text length count
+
+    chunk_size = rcount * tcount
+    pbar = tqdm(total=chunk_size)
+
+    for rec in recastFuncs:
+        text = rec.setup_recast(text)
+        pbar.update(tcount)
+    
+    return text
