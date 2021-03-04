@@ -1,5 +1,6 @@
 README.md
 setup.py
+swachhdata/__init__.py
 swachhdata.egg-info/PKG-INFO
 swachhdata.egg-info/SOURCES.txt
 swachhdata.egg-info/dependency_links.txt
