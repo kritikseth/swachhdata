@@ -1,7 +1,9 @@
 ![](https://raw.githubusercontent.com/kritikseth/kritikseth/master/assets/icons/swachhdata.svg)
 
 # swachhdata
-
+<br><br>
+### _swachhdata library repository has now been moved [Click Here](https://github.com/swachhdata/swachhdata) to go to the new repository_
+<br><br>
 [![pypi package](https://badge.fury.io/py/swachhdata.svg)](https://pypi.org/project/swachhdata)
 [![Downloads](https://static.pepy.tech/personalized-badge/swachhdata?period=total&units=international_system&left_color=gray&right_color=blue&left_text=Downloads)](https://pepy.tech/project/swachhdata)
 [![GitHub last commit](https://img.shields.io/github/last-commit/kritikseth/swachhdata.svg)](https://github.com/kritikseth/swachhdata/commits/master)
